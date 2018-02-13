@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.typt.dao.UserinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.typt.entity.Userinfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="c_name" property="cName" jdbcType="VARCHAR" />
+    <result column="c_sex" property="cSex" jdbcType="INTEGER" />
+    <result column="c_birth" property="cBirth" jdbcType="VARCHAR" />
+    <result column="c_certificatetype" property="cCertificatetype" jdbcType="INTEGER" />
+    <result column="c_certificateno" property="cCertificateno" jdbcType="VARCHAR" />
+    <result column="c_address" property="cAddress" jdbcType="VARCHAR" />
+    <result column="c_tel" property="cTel" jdbcType="VARCHAR" />
+    <result column="c_mobile" property="cMobile" jdbcType="VARCHAR" />
+    <result column="c_fax" property="cFax" jdbcType="VARCHAR" />
+    <result column="c_zipcode" property="cZipcode" jdbcType="VARCHAR" />
+    <result column="c_status" property="cStatus" jdbcType="INTEGER" />
+    <result column="c_popedom" property="cPopedom" jdbcType="VARCHAR" />
+    <result column="c_meal" property="cMeal" jdbcType="VARCHAR" />
+    <result column="c_schoolid" property="cSchoolid" jdbcType="VARCHAR" />
+    <result column="c_accounts" property="cAccounts" jdbcType="VARCHAR" />
+    <result column="c_password" property="cPassword" jdbcType="VARCHAR" />
+    <result column="c_email" property="cEmail" jdbcType="VARCHAR" />
+    <result column="c_question" property="cQuestion" jdbcType="VARCHAR" />
+    <result column="c_answer" property="cAnswer" jdbcType="VARCHAR" />
+    <result column="c_createtime" property="cCreatetime" jdbcType="VARCHAR" />
+    <result column="c_emeal" property="cEmeal" jdbcType="VARCHAR" />
+    <result column="c_accountprefix" property="cAccountprefix" jdbcType="VARCHAR" />
+    <result column="c_accountsuffix" property="cAccountsuffix" jdbcType="VARCHAR" />
+    <result column="c_department" property="cDepartment" jdbcType="VARCHAR" />
+    <result column="c_profession" property="cProfession" jdbcType="VARCHAR" />
+    <result column="c_studentid" property="cStudentid" jdbcType="VARCHAR" />
+    <result column="c_entranceyear" property="cEntranceyear" jdbcType="VARCHAR" />
+    <result column="c_huoyueflag" property="cHuoyueflag" jdbcType="VARCHAR" />
+    <result column="c_template" property="cTemplate" jdbcType="VARCHAR" />
+    <result column="c_accountstatus" property="cAccountstatus" jdbcType="VARCHAR" />
+    <result column="c_accountserialno" property="cAccountserialno" jdbcType="VARCHAR" />
+    <result column="c_ecplogon" property="cEcplogon" jdbcType="VARCHAR" />
+    <result column="c_portalid" property="cPortalid" jdbcType="VARCHAR" />
+    <result column="c_ecpaccount" property="cEcpaccount" jdbcType="VARCHAR" />
+    <result column="c_uimaccount" property="cUimaccount" jdbcType="VARCHAR" />
+    <result column="c_uimcardid" property="cUimcardid" jdbcType="VARCHAR" />
+    <result column="c_accounttype" property="cAccounttype" jdbcType="VARCHAR" />
+    <result column="c_crmid" property="cCrmid" jdbcType="VARCHAR" />
+    <result column="c_crmnum" property="cCrmnum" jdbcType="VARCHAR" />
+    <result column="c_tcstatus" property="cTcstatus" jdbcType="VARCHAR" />
+    <result column="c_uimshortid" property="cUimshortid" jdbcType="VARCHAR" />
+    <result column="c_accountnum" property="cAccountnum" jdbcType="VARCHAR" />
+    <result column="c_billingaccountnum" property="cBillingaccountnum" jdbcType="VARCHAR" />
+    <result column="c_areaid" property="cAreaid" jdbcType="VARCHAR" />
+    <result column="c_chgaccfalg" property="cChgaccfalg" jdbcType="VARCHAR" />
+    <result column="c_intramural" property="cIntramural" jdbcType="VARCHAR" />
+    <result column="c_uimid" property="cUimid" jdbcType="VARCHAR" />
+    <result column="c_usetime" property="cUsetime" jdbcType="VARCHAR" />
+    <result column="c_updatetime" property="cUpdatetime" jdbcType="VARCHAR" />
+    <result column="c_updateflag" property="cUpdateflag" jdbcType="VARCHAR" />
+    <result column="c_nickname" property="cNickname" jdbcType="VARCHAR" />
+    <result column="c_schoolname" property="cSchoolname" jdbcType="VARCHAR" />
+    <result column="c_professionalname" property="cProfessionalname" jdbcType="VARCHAR" />
+    <result column="c_phone" property="cPhone" jdbcType="VARCHAR" />
+    <result column="c_studentno" property="cStudentno" jdbcType="VARCHAR" />
+    <result column="c_telephone" property="cTelephone" jdbcType="VARCHAR" />
+    <result column="c_qq" property="cQq" jdbcType="VARCHAR" />
+    <result column="c_birthplace" property="cBirthplace" jdbcType="VARCHAR" />
+    <result column="c_education" property="cEducation" jdbcType="VARCHAR" />
+    <result column="c_emailtype" property="cEmailtype" jdbcType="VARCHAR" />
+    <result column="c_zjuaddress" property="cZjuaddress" jdbcType="VARCHAR" />
+    <result column="c_text1" property="cText1" jdbcType="VARCHAR" />
+    <result column="c_text2" property="cText2" jdbcType="VARCHAR" />
+    <result column="c_text3" property="cText3" jdbcType="VARCHAR" />
+    <result column="c_text4" property="cText4" jdbcType="VARCHAR" />
+    <result column="c_particularplataccount" property="cParticularplataccount" jdbcType="VARCHAR" />
+    <result column="c_type" property="cType" jdbcType="VARCHAR" />
+    <result column="c_transflag" property="cTransflag" jdbcType="VARCHAR" />
+    <result column="c_report201008" property="cReport201008" jdbcType="VARCHAR" />
+    <result column="c_imcmodel" property="cImcmodel" jdbcType="VARCHAR" />
+    <result column="c_imcstate" property="cImcstate" jdbcType="VARCHAR" />
+    <result column="c_imcinvalidtime" property="cImcinvalidtime" jdbcType="VARCHAR" />
+    <result column="c_wzdxstate" property="cWzdxstate" jdbcType="VARCHAR" />
+    <result column="c_wzdxjhtime" property="cWzdxjhtime" jdbcType="VARCHAR" />
+    <result column="c_oldimcaccount" property="cOldimcaccount" jdbcType="VARCHAR" />
+    <result column="c_yeslstate" property="cYeslstate" jdbcType="VARCHAR" />
+    <result column="c_college" property="cCollege" jdbcType="VARCHAR" />
+    <result column="c_adminclass" property="cAdminclass" jdbcType="VARCHAR" />
+    <result column="c_customermanager" property="cCustomermanager" jdbcType="VARCHAR" />
+    <result column="c_passwordtype" property="cPasswordtype" jdbcType="VARCHAR" />
+    <result column="c_passwordtime" property="cPasswordtime" jdbcType="VARCHAR" />
+    <result column="c_passwordphone" property="cPasswordphone" jdbcType="VARCHAR" />
+    <result column="c_inviterid" property="cInviterid" jdbcType="VARCHAR" />
+    <result column="c_addstatus" property="cAddstatus" jdbcType="VARCHAR" />
+    <result column="c_srunproductid" property="cSrunproductid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, c_name, c_sex, c_birth, c_certificatetype, c_certificateno, c_address, c_tel, 
+    c_mobile, c_fax, c_zipcode, c_status, c_popedom, c_meal, c_schoolid, c_accounts, 
+    c_password, c_email, c_question, c_answer, c_createtime, c_emeal, c_accountprefix, 
+    c_accountsuffix, c_department, c_profession, c_studentid, c_entranceyear, c_huoyueflag, 
+    c_template, c_accountstatus, c_accountserialno, c_ecplogon, c_portalid, c_ecpaccount, 
+    c_uimaccount, c_uimcardid, c_accounttype, c_crmid, c_crmnum, c_tcstatus, c_uimshortid, 
+    c_accountnum, c_billingaccountnum, c_areaid, c_chgaccfalg, c_intramural, c_uimid, 
+    c_usetime, c_updatetime, c_updateflag, c_nickname, c_schoolname, c_professionalname, 
+    c_phone, c_studentno, c_telephone, c_qq, c_birthplace, c_education, c_emailtype, 
+    c_zjuaddress, c_text1, c_text2, c_text3, c_text4, c_particularplataccount, c_type, 
+    c_transflag, c_report201008, c_imcmodel, c_imcstate, c_imcinvalidtime, c_wzdxstate, 
+    c_wzdxjhtime, c_oldimcaccount, c_yeslstate, c_college, c_adminclass, c_customermanager, 
+    c_passwordtype, c_passwordtime, c_passwordphone, c_inviterid, c_addstatus, c_srunproductid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_typt_userinfo
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from t_typt_userinfo
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insertSelective" parameterType="com.typt.entity.Userinfo" >
+    <selectKey keyProperty="id" resultType="String" order="BEFORE">
+      select replace(uuid(),'-','') from dual
+    </selectKey>
+    insert into t_typt_userinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="cName != null" >
+        c_name,
+      </if>
+      <if test="cSex != null" >
+        c_sex,
+      </if>
+      <if test="cBirth != null" >
+        c_birth,
+      </if>
+      <if test="cCertificatetype != null" >
+        c_certificatetype,
+      </if>
+      <if test="cCertificateno != null" >
+        c_certificateno,
+      </if>
+      <if test="cAddress != null" >
+        c_address,
+      </if>
+      <if test="cTel != null" >
+        c_tel,
+      </if>
+      <if test="cMobile != null" >
+        c_mobile,
+      </if>
+      <if test="cFax != null" >
+        c_fax,
+      </if>
+      <if test="cZipcode != null" >
+        c_zipcode,
+      </if>
+      <if test="cStatus != null" >
+        c_status,
+      </if>
+      <if test="cPopedom != null" >
+        c_popedom,
+      </if>
+      <if test="cMeal != null" >
+        c_meal,
+      </if>
+      <if test="cSchoolid != null" >
+        c_schoolid,
+      </if>
+      <if test="cAccounts != null" >
+        c_accounts,
+      </if>
+      <if test="cPassword != null" >
+        c_password,
+      </if>
+      <if test="cEmail != null" >
+        c_email,
+      </if>
+      <if test="cQuestion != null" >
+        c_question,
+      </if>
+      <if test="cAnswer != null" >
+        c_answer,
+      </if>
+      <if test="cCreatetime != null" >
+        c_createtime,
+      </if>
+      <if test="cEmeal != null" >
+        c_emeal,
+      </if>
+      <if test="cAccountprefix != null" >
+        c_accountprefix,
+      </if>
+      <if test="cAccountsuffix != null" >
+        c_accountsuffix,
+      </if>
+      <if test="cDepartment != null" >
+        c_department,
+      </if>
+      <if test="cProfession != null" >
+        c_profession,
+      </if>
+      <if test="cStudentid != null" >
+        c_studentid,
+      </if>
+      <if test="cEntranceyear != null" >
+        c_entranceyear,
+      </if>
+      <if test="cHuoyueflag != null" >
+        c_huoyueflag,
+      </if>
+      <if test="cTemplate != null" >
+        c_template,
+      </if>
+      <if test="cAccountstatus != null" >
+        c_accountstatus,
+      </if>
+      <if test="cAccountserialno != null" >
+        c_accountserialno,
+      </if>
+      <if test="cEcplogon != null" >
+        c_ecplogon,
+      </if>
+      <if test="cPortalid != null" >
+        c_portalid,
+      </if>
+      <if test="cEcpaccount != null" >
+        c_ecpaccount,
+      </if>
+      <if test="cUimaccount != null" >
+        c_uimaccount,
+      </if>
+      <if test="cUimcardid != null" >
+        c_uimcardid,
+      </if>
+      <if test="cAccounttype != null" >
+        c_accounttype,
+      </if>
+      <if test="cCrmid != null" >
+        c_crmid,
+      </if>
+      <if test="cCrmnum != null" >
+        c_crmnum,
+      </if>
+      <if test="cTcstatus != null" >
+        c_tcstatus,
+      </if>
+      <if test="cUimshortid != null" >
+        c_uimshortid,
+      </if>
+      <if test="cAccountnum != null" >
+        c_accountnum,
+      </if>
+      <if test="cBillingaccountnum != null" >
+        c_billingaccountnum,
+      </if>
+      <if test="cAreaid != null" >
+        c_areaid,
+      </if>
+      <if test="cChgaccfalg != null" >
+        c_chgaccfalg,
+      </if>
+      <if test="cIntramural != null" >
+        c_intramural,
+      </if>
+      <if test="cUimid != null" >
+        c_uimid,
+      </if>
+      <if test="cUsetime != null" >
+        c_usetime,
+      </if>
+      <if test="cUpdatetime != null" >
+        c_updatetime,
+      </if>
+      <if test="cUpdateflag != null" >
+        c_updateflag,
+      </if>
+      <if test="cNickname != null" >
+        c_nickname,
+      </if>
+      <if test="cSchoolname != null" >
+        c_schoolname,
+      </if>
+      <if test="cProfessionalname != null" >
+        c_professionalname,
+      </if>
+      <if test="cPhone != null" >
+        c_phone,
+      </if>
+      <if test="cStudentno != null" >
+        c_studentno,
+      </if>
+      <if test="cTelephone != null" >
+        c_telephone,
+      </if>
+      <if test="cQq != null" >
+        c_qq,
+      </if>
+      <if test="cBirthplace != null" >
+        c_birthplace,
+      </if>
+      <if test="cEducation != null" >
+        c_education,
+      </if>
+      <if test="cEmailtype != null" >
+        c_emailtype,
+      </if>
+      <if test="cZjuaddress != null" >
+        c_zjuaddress,
+      </if>
+      <if test="cText1 != null" >
+        c_text1,
+      </if>
+      <if test="cText2 != null" >
+        c_text2,
+      </if>
+      <if test="cText3 != null" >
+        c_text3,
+      </if>
+      <if test="cText4 != null" >
+        c_text4,
+      </if>
+      <if test="cParticularplataccount != null" >
+        c_particularplataccount,
+      </if>
+      <if test="cType != null" >
+        c_type,
+      </if>
+      <if test="cTransflag != null" >
+        c_transflag,
+      </if>
+      <if test="cReport201008 != null" >
+        c_report201008,
+      </if>
+      <if test="cImcmodel != null" >
+        c_imcmodel,
+      </if>
+      <if test="cImcstate != null" >
+        c_imcstate,
+      </if>
+      <if test="cImcinvalidtime != null" >
+        c_imcinvalidtime,
+      </if>
+      <if test="cWzdxstate != null" >
+        c_wzdxstate,
+      </if>
+      <if test="cWzdxjhtime != null" >
+        c_wzdxjhtime,
+      </if>
+      <if test="cOldimcaccount != null" >
+        c_oldimcaccount,
+      </if>
+      <if test="cYeslstate != null" >
+        c_yeslstate,
+      </if>
+      <if test="cCollege != null" >
+        c_college,
+      </if>
+      <if test="cAdminclass != null" >
+        c_adminclass,
+      </if>
+      <if test="cCustomermanager != null" >
+        c_customermanager,
+      </if>
+      <if test="cPasswordtype != null" >
+        c_passwordtype,
+      </if>
+      <if test="cPasswordtime != null" >
+        c_passwordtime,
+      </if>
+      <if test="cPasswordphone != null" >
+        c_passwordphone,
+      </if>
+      <if test="cInviterid != null" >
+        c_inviterid,
+      </if>
+      <if test="cAddstatus != null" >
+        c_addstatus,
+      </if>
+      <if test="cSrunproductid != null" >
+        c_srunproductid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+        #{id,jdbcType=VARCHAR},
+      <if test="cName != null" >
+        #{cName,jdbcType=VARCHAR},
+      </if>
+      <if test="cSex != null" >
+        #{cSex,jdbcType=INTEGER},
+      </if>
+      <if test="cBirth != null" >
+        #{cBirth,jdbcType=VARCHAR},
+      </if>
+      <if test="cCertificatetype != null" >
+        #{cCertificatetype,jdbcType=INTEGER},
+      </if>
+      <if test="cCertificateno != null" >
+        #{cCertificateno,jdbcType=VARCHAR},
+      </if>
+      <if test="cAddress != null" >
+        #{cAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cTel != null" >
+        #{cTel,jdbcType=VARCHAR},
+      </if>
+      <if test="cMobile != null" >
+        #{cMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="cFax != null" >
+        #{cFax,jdbcType=VARCHAR},
+      </if>
+      <if test="cZipcode != null" >
+        #{cZipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="cStatus != null" >
+        #{cStatus,jdbcType=INTEGER},
+      </if>
+      <if test="cPopedom != null" >
+        #{cPopedom,jdbcType=VARCHAR},
+      </if>
+      <if test="cMeal != null" >
+        #{cMeal,jdbcType=VARCHAR},
+      </if>
+      <if test="cSchoolid != null" >
+        #{cSchoolid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccounts != null" >
+        #{cAccounts,jdbcType=VARCHAR},
+      </if>
+      <if test="cPassword != null" >
+        #{cPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="cEmail != null" >
+        #{cEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuestion != null" >
+        #{cQuestion,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnswer != null" >
+        #{cAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="cCreatetime != null" >
+        #{cCreatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cEmeal != null" >
+        #{cEmeal,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountprefix != null" >
+        #{cAccountprefix,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountsuffix != null" >
+        #{cAccountsuffix,jdbcType=VARCHAR},
+      </if>
+      <if test="cDepartment != null" >
+        #{cDepartment,jdbcType=VARCHAR},
+      </if>
+      <if test="cProfession != null" >
+        #{cProfession,jdbcType=VARCHAR},
+      </if>
+      <if test="cStudentid != null" >
+        #{cStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="cEntranceyear != null" >
+        #{cEntranceyear,jdbcType=VARCHAR},
+      </if>
+      <if test="cHuoyueflag != null" >
+        #{cHuoyueflag,jdbcType=VARCHAR},
+      </if>
+      <if test="cTemplate != null" >
+        #{cTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountstatus != null" >
+        #{cAccountstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountserialno != null" >
+        #{cAccountserialno,jdbcType=VARCHAR},
+      </if>
+      <if test="cEcplogon != null" >
+        #{cEcplogon,jdbcType=VARCHAR},
+      </if>
+      <if test="cPortalid != null" >
+        #{cPortalid,jdbcType=VARCHAR},
+      </if>
+      <if test="cEcpaccount != null" >
+        #{cEcpaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimaccount != null" >
+        #{cUimaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimcardid != null" >
+        #{cUimcardid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccounttype != null" >
+        #{cAccounttype,jdbcType=VARCHAR},
+      </if>
+      <if test="cCrmid != null" >
+        #{cCrmid,jdbcType=VARCHAR},
+      </if>
+      <if test="cCrmnum != null" >
+        #{cCrmnum,jdbcType=VARCHAR},
+      </if>
+      <if test="cTcstatus != null" >
+        #{cTcstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimshortid != null" >
+        #{cUimshortid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountnum != null" >
+        #{cAccountnum,jdbcType=VARCHAR},
+      </if>
+      <if test="cBillingaccountnum != null" >
+        #{cBillingaccountnum,jdbcType=VARCHAR},
+      </if>
+      <if test="cAreaid != null" >
+        #{cAreaid,jdbcType=VARCHAR},
+      </if>
+      <if test="cChgaccfalg != null" >
+        #{cChgaccfalg,jdbcType=VARCHAR},
+      </if>
+      <if test="cIntramural != null" >
+        #{cIntramural,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimid != null" >
+        #{cUimid,jdbcType=VARCHAR},
+      </if>
+      <if test="cUsetime != null" >
+        #{cUsetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cUpdatetime != null" >
+        #{cUpdatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cUpdateflag != null" >
+        #{cUpdateflag,jdbcType=VARCHAR},
+      </if>
+      <if test="cNickname != null" >
+        #{cNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="cSchoolname != null" >
+        #{cSchoolname,jdbcType=VARCHAR},
+      </if>
+      <if test="cProfessionalname != null" >
+        #{cProfessionalname,jdbcType=VARCHAR},
+      </if>
+      <if test="cPhone != null" >
+        #{cPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="cStudentno != null" >
+        #{cStudentno,jdbcType=VARCHAR},
+      </if>
+      <if test="cTelephone != null" >
+        #{cTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="cQq != null" >
+        #{cQq,jdbcType=VARCHAR},
+      </if>
+      <if test="cBirthplace != null" >
+        #{cBirthplace,jdbcType=VARCHAR},
+      </if>
+      <if test="cEducation != null" >
+        #{cEducation,jdbcType=VARCHAR},
+      </if>
+      <if test="cEmailtype != null" >
+        #{cEmailtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cZjuaddress != null" >
+        #{cZjuaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cText1 != null" >
+        #{cText1,jdbcType=VARCHAR},
+      </if>
+      <if test="cText2 != null" >
+        #{cText2,jdbcType=VARCHAR},
+      </if>
+      <if test="cText3 != null" >
+        #{cText3,jdbcType=VARCHAR},
+      </if>
+      <if test="cText4 != null" >
+        #{cText4,jdbcType=VARCHAR},
+      </if>
+      <if test="cParticularplataccount != null" >
+        #{cParticularplataccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cType != null" >
+        #{cType,jdbcType=VARCHAR},
+      </if>
+      <if test="cTransflag != null" >
+        #{cTransflag,jdbcType=VARCHAR},
+      </if>
+      <if test="cReport201008 != null" >
+        #{cReport201008,jdbcType=VARCHAR},
+      </if>
+      <if test="cImcmodel != null" >
+        #{cImcmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="cImcstate != null" >
+        #{cImcstate,jdbcType=VARCHAR},
+      </if>
+      <if test="cImcinvalidtime != null" >
+        #{cImcinvalidtime,jdbcType=VARCHAR},
+      </if>
+      <if test="cWzdxstate != null" >
+        #{cWzdxstate,jdbcType=VARCHAR},
+      </if>
+      <if test="cWzdxjhtime != null" >
+        #{cWzdxjhtime,jdbcType=VARCHAR},
+      </if>
+      <if test="cOldimcaccount != null" >
+        #{cOldimcaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cYeslstate != null" >
+        #{cYeslstate,jdbcType=VARCHAR},
+      </if>
+      <if test="cCollege != null" >
+        #{cCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="cAdminclass != null" >
+        #{cAdminclass,jdbcType=VARCHAR},
+      </if>
+      <if test="cCustomermanager != null" >
+        #{cCustomermanager,jdbcType=VARCHAR},
+      </if>
+      <if test="cPasswordtype != null" >
+        #{cPasswordtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cPasswordtime != null" >
+        #{cPasswordtime,jdbcType=VARCHAR},
+      </if>
+      <if test="cPasswordphone != null" >
+        #{cPasswordphone,jdbcType=VARCHAR},
+      </if>
+      <if test="cInviterid != null" >
+        #{cInviterid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAddstatus != null" >
+        #{cAddstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cSrunproductid != null" >
+        #{cSrunproductid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.typt.entity.Userinfo" >
+    update t_typt_userinfo
+    <set >
+      <if test="cName != null" >
+        c_name = #{cName,jdbcType=VARCHAR},
+      </if>
+      <if test="cSex != null" >
+        c_sex = #{cSex,jdbcType=INTEGER},
+      </if>
+      <if test="cBirth != null" >
+        c_birth = #{cBirth,jdbcType=VARCHAR},
+      </if>
+      <if test="cCertificatetype != null" >
+        c_certificatetype = #{cCertificatetype,jdbcType=INTEGER},
+      </if>
+      <if test="cCertificateno != null" >
+        c_certificateno = #{cCertificateno,jdbcType=VARCHAR},
+      </if>
+      <if test="cAddress != null" >
+        c_address = #{cAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cTel != null" >
+        c_tel = #{cTel,jdbcType=VARCHAR},
+      </if>
+      <if test="cMobile != null" >
+        c_mobile = #{cMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="cFax != null" >
+        c_fax = #{cFax,jdbcType=VARCHAR},
+      </if>
+      <if test="cZipcode != null" >
+        c_zipcode = #{cZipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="cStatus != null" >
+        c_status = #{cStatus,jdbcType=INTEGER},
+      </if>
+      <if test="cPopedom != null" >
+        c_popedom = #{cPopedom,jdbcType=VARCHAR},
+      </if>
+      <if test="cMeal != null" >
+        c_meal = #{cMeal,jdbcType=VARCHAR},
+      </if>
+      <if test="cSchoolid != null" >
+        c_schoolid = #{cSchoolid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccounts != null" >
+        c_accounts = #{cAccounts,jdbcType=VARCHAR},
+      </if>
+      <if test="cPassword != null" >
+        c_password = #{cPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="cEmail != null" >
+        c_email = #{cEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="cQuestion != null" >
+        c_question = #{cQuestion,jdbcType=VARCHAR},
+      </if>
+      <if test="cAnswer != null" >
+        c_answer = #{cAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="cCreatetime != null" >
+        c_createtime = #{cCreatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cEmeal != null" >
+        c_emeal = #{cEmeal,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountprefix != null" >
+        c_accountprefix = #{cAccountprefix,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountsuffix != null" >
+        c_accountsuffix = #{cAccountsuffix,jdbcType=VARCHAR},
+      </if>
+      <if test="cDepartment != null" >
+        c_department = #{cDepartment,jdbcType=VARCHAR},
+      </if>
+      <if test="cProfession != null" >
+        c_profession = #{cProfession,jdbcType=VARCHAR},
+      </if>
+      <if test="cStudentid != null" >
+        c_studentid = #{cStudentid,jdbcType=VARCHAR},
+      </if>
+      <if test="cEntranceyear != null" >
+        c_entranceyear = #{cEntranceyear,jdbcType=VARCHAR},
+      </if>
+      <if test="cHuoyueflag != null" >
+        c_huoyueflag = #{cHuoyueflag,jdbcType=VARCHAR},
+      </if>
+      <if test="cTemplate != null" >
+        c_template = #{cTemplate,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountstatus != null" >
+        c_accountstatus = #{cAccountstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountserialno != null" >
+        c_accountserialno = #{cAccountserialno,jdbcType=VARCHAR},
+      </if>
+      <if test="cEcplogon != null" >
+        c_ecplogon = #{cEcplogon,jdbcType=VARCHAR},
+      </if>
+      <if test="cPortalid != null" >
+        c_portalid = #{cPortalid,jdbcType=VARCHAR},
+      </if>
+      <if test="cEcpaccount != null" >
+        c_ecpaccount = #{cEcpaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimaccount != null" >
+        c_uimaccount = #{cUimaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimcardid != null" >
+        c_uimcardid = #{cUimcardid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccounttype != null" >
+        c_accounttype = #{cAccounttype,jdbcType=VARCHAR},
+      </if>
+      <if test="cCrmid != null" >
+        c_crmid = #{cCrmid,jdbcType=VARCHAR},
+      </if>
+      <if test="cCrmnum != null" >
+        c_crmnum = #{cCrmnum,jdbcType=VARCHAR},
+      </if>
+      <if test="cTcstatus != null" >
+        c_tcstatus = #{cTcstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimshortid != null" >
+        c_uimshortid = #{cUimshortid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAccountnum != null" >
+        c_accountnum = #{cAccountnum,jdbcType=VARCHAR},
+      </if>
+      <if test="cBillingaccountnum != null" >
+        c_billingaccountnum = #{cBillingaccountnum,jdbcType=VARCHAR},
+      </if>
+      <if test="cAreaid != null" >
+        c_areaid = #{cAreaid,jdbcType=VARCHAR},
+      </if>
+      <if test="cChgaccfalg != null" >
+        c_chgaccfalg = #{cChgaccfalg,jdbcType=VARCHAR},
+      </if>
+      <if test="cIntramural != null" >
+        c_intramural = #{cIntramural,jdbcType=VARCHAR},
+      </if>
+      <if test="cUimid != null" >
+        c_uimid = #{cUimid,jdbcType=VARCHAR},
+      </if>
+      <if test="cUsetime != null" >
+        c_usetime = #{cUsetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cUpdatetime != null" >
+        c_updatetime = #{cUpdatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cUpdateflag != null" >
+        c_updateflag = #{cUpdateflag,jdbcType=VARCHAR},
+      </if>
+      <if test="cNickname != null" >
+        c_nickname = #{cNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="cSchoolname != null" >
+        c_schoolname = #{cSchoolname,jdbcType=VARCHAR},
+      </if>
+      <if test="cProfessionalname != null" >
+        c_professionalname = #{cProfessionalname,jdbcType=VARCHAR},
+      </if>
+      <if test="cPhone != null" >
+        c_phone = #{cPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="cStudentno != null" >
+        c_studentno = #{cStudentno,jdbcType=VARCHAR},
+      </if>
+      <if test="cTelephone != null" >
+        c_telephone = #{cTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="cQq != null" >
+        c_qq = #{cQq,jdbcType=VARCHAR},
+      </if>
+      <if test="cBirthplace != null" >
+        c_birthplace = #{cBirthplace,jdbcType=VARCHAR},
+      </if>
+      <if test="cEducation != null" >
+        c_education = #{cEducation,jdbcType=VARCHAR},
+      </if>
+      <if test="cEmailtype != null" >
+        c_emailtype = #{cEmailtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cZjuaddress != null" >
+        c_zjuaddress = #{cZjuaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cText1 != null" >
+        c_text1 = #{cText1,jdbcType=VARCHAR},
+      </if>
+      <if test="cText2 != null" >
+        c_text2 = #{cText2,jdbcType=VARCHAR},
+      </if>
+      <if test="cText3 != null" >
+        c_text3 = #{cText3,jdbcType=VARCHAR},
+      </if>
+      <if test="cText4 != null" >
+        c_text4 = #{cText4,jdbcType=VARCHAR},
+      </if>
+      <if test="cParticularplataccount != null" >
+        c_particularplataccount = #{cParticularplataccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cType != null" >
+        c_type = #{cType,jdbcType=VARCHAR},
+      </if>
+      <if test="cTransflag != null" >
+        c_transflag = #{cTransflag,jdbcType=VARCHAR},
+      </if>
+      <if test="cReport201008 != null" >
+        c_report201008 = #{cReport201008,jdbcType=VARCHAR},
+      </if>
+      <if test="cImcmodel != null" >
+        c_imcmodel = #{cImcmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="cImcstate != null" >
+        c_imcstate = #{cImcstate,jdbcType=VARCHAR},
+      </if>
+      <if test="cImcinvalidtime != null" >
+        c_imcinvalidtime = #{cImcinvalidtime,jdbcType=VARCHAR},
+      </if>
+      <if test="cWzdxstate != null" >
+        c_wzdxstate = #{cWzdxstate,jdbcType=VARCHAR},
+      </if>
+      <if test="cWzdxjhtime != null" >
+        c_wzdxjhtime = #{cWzdxjhtime,jdbcType=VARCHAR},
+      </if>
+      <if test="cOldimcaccount != null" >
+        c_oldimcaccount = #{cOldimcaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cYeslstate != null" >
+        c_yeslstate = #{cYeslstate,jdbcType=VARCHAR},
+      </if>
+      <if test="cCollege != null" >
+        c_college = #{cCollege,jdbcType=VARCHAR},
+      </if>
+      <if test="cAdminclass != null" >
+        c_adminclass = #{cAdminclass,jdbcType=VARCHAR},
+      </if>
+      <if test="cCustomermanager != null" >
+        c_customermanager = #{cCustomermanager,jdbcType=VARCHAR},
+      </if>
+      <if test="cPasswordtype != null" >
+        c_passwordtype = #{cPasswordtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cPasswordtime != null" >
+        c_passwordtime = #{cPasswordtime,jdbcType=VARCHAR},
+      </if>
+      <if test="cPasswordphone != null" >
+        c_passwordphone = #{cPasswordphone,jdbcType=VARCHAR},
+      </if>
+      <if test="cInviterid != null" >
+        c_inviterid = #{cInviterid,jdbcType=VARCHAR},
+      </if>
+      <if test="cAddstatus != null" >
+        c_addstatus = #{cAddstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cSrunproductid != null" >
+        c_srunproductid = #{cSrunproductid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
